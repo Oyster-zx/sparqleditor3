@@ -1,42 +1,43 @@
 .yasqe {
 
-@-moz-keyframes blink {
-    0% {
-        background: #7e7
-    }
-    50% {
-        background: 0 0
-    }
-    100% {
-        background: #7e7
-    }
+    /*@-moz-keyframes blink {*/
+    /*0% {*/
+    /*background: #7e7*/
+    /*}*/
+    /*50% {*/
+    /*background: 0 0*/
+    /*}*/
+    /*100% {*/
+    /*background: #7e7*/
+    /*}*/
+    /*}*/
+
+    /*@-webkit-keyframes blink {*/
+    /*0% {*/
+    /*background: #7e7*/
+    /*}*/
+    /*50% {*/
+    /*background: 0 0*/
+    /*}*/
+    /*100% {*/
+    /*background: #7e7*/
+    /*}*/
+    /*}*/
+
+    /*@keyframes blink {*/
+    /*0% {*/
+    /*background: #7e7*/
+    /*}*/
+    /*50% {*/
+    /*background: 0 0*/
+    /*}*/
+    /*100% {*/
+    /*background: #7e7*/
+    /*}*/
+    /*}*/
+
 }
 
-@-webkit-keyframes blink {
-    0% {
-        background: #7e7
-    }
-    50% {
-        background: 0 0
-    }
-    100% {
-        background: #7e7
-    }
-}
-
-@keyframes blink {
-    0% {
-        background: #7e7
-    }
-    50% {
-        background: 0 0
-    }
-    100% {
-        background: #7e7
-    }
-}
-
-}
 .yasqe .CodeMirror {
     font-family: monospace;
     height: 300px
@@ -492,7 +493,7 @@
 }
 
 .yasqe .gutterErrorBar {
-    width: 4px
+    width: 15px
 }
 
 .yasqe .yasqe_buttons {
@@ -555,7 +556,6 @@
     position: absolute;
     width: 220px;
     white-space: -moz-pre-wrap !important;
-    white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     white-space: pre-wrap;
     white-space: normal

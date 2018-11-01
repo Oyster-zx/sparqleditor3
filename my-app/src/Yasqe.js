@@ -5,6 +5,11 @@ import './Yasqe.css';
 
 class Yasqe extends Component {
 
+    constructor(props) {
+        super(props);
+        this.yasqe = null;
+    }
+
     componentDidUpdate() {
         this.yasqe.refresh();
     }
@@ -121,18 +126,26 @@ class Yasqe extends Component {
 
 
         //finally, initialize YASQE
-        var yasqe = YASQE(document.getElementById("yasqe"));
+        this.yasqe = YASQE(this.refs.yasqe);
     }
 
+    getText() {
+        return this.yasqe.getValue();
+    }
 
     render() {
-
         return (
             <div>
-                <div id="yasqe"></div>
+                <div className="card">
+                    <div className="card-body">
+                        <h4 className="card-title">Task description</h4>
+                        <div ref="yasqe"/>
+                    </div>
+                </div>
             </div>
         );
     }
 }
+
 
 export default Yasqe;

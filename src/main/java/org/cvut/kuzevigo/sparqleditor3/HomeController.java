@@ -1,9 +1,10 @@
 package org.cvut.kuzevigo.sparqleditor3;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +18,13 @@ public class HomeController {
     @ResponseBody
     public List<Employee> index() {
         return (List<Employee>) employeeRepository.findAll();
+    }
+
+    @RequestMapping(value = "/runDummy", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity<Query> run(@RequestBody Query query) {
+        query.setQuery("Result of query: "  + query.getQuery());
+        return new ResponseEntity<>(query,HttpStatus.OK);
     }
 
 }
