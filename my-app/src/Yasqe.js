@@ -7,6 +7,7 @@ class Yasqe extends Component {
 
     constructor(props) {
         super(props);
+        console.log(JSON.stringify(props));
         this.yasqe = null;
     }
 
@@ -138,7 +139,7 @@ class Yasqe extends Component {
             <div>
                 <div className="card">
                     <div className="card-body">
-                        <h4 className="card-title">Task description</h4>
+                        <h4 className="card-title">Task {this.props.taskNum} description</h4>
                         <div ref="yasqe"/>
                     </div>
                 </div>
